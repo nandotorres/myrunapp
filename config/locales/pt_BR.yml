@@ -1,3 +1,5 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 pt_BR:
   home_title: "MyRunApp: compartilhar corridas com Nike+ no Facebook"
   home_h1: "Compartilhar corridas com Nike+ no Facebook"
