@@ -18,3 +18,5 @@ gem 'imgkit'
 gem 'execjs'
 gem 'therubyracer'
 gem 'capistrano'
+gem 'newrelic_rpm'
+gem "airbrake"

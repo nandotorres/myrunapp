@@ -14,7 +14,7 @@ set :repository, "git@github.com:nandotorres/myrunapp.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
  
-set :user, 'nandotorres'
+set :user, 'ubuntu'
 set :ssh_options, { :forward_agent => true }
  
 role :app, "50.17.222.29"
