@@ -1,0 +1,62 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  home_title: "MyRunApp: share your Nike+ runs on Facebook"
+  home_h1: "Easy way to share Nike+ runs on Facebook"
+  home_headline: "If you use Apple's Nike + sensor, you can share each new run on your Facebook so simple and fun. You just need to log in and enter your Nike+ address to start sharing."
+  must_be_logged: "You must log on in order to get access to MyRunApp"  
+  sign_in_with_provider: "Log in with your Facebook account"
+  sign_in_successfully: "Successfully logged in"
+  sign_out_successfully: "Successfully logged out"    
+  sign_out: "Desconectar"
+  invalid_access: "We are not sure about your identity. Please, log in again"
+  welcome: "Welcome"
+  click_here: "Click here"
+  help: "Help"
+  preferences_menu: "Preferences"
+  history_menu: "Run history"
+  lbl_basic_informations: "Basic informations"
+  lbl_nikeplus_setup: "Your Nike+ account setup"
+  lbl_nikeplus_url: "Your profile's address on Nike+"
+  lbl_test_nikeplus_url: "Check whether you supplied the correct address"
+  lbl_test_nikeplus_url_successfull: "Well done {screenName}! Press the Update my infos button below"
+  lbl_test_nikeplus_url_unsuccessfull: "It didn't work. Verify the address and try again"
+  lbl_test_nikeplus_url_bad: "Malformed address"  
+  lbl_units: "Your prefered units"
+  lbl_unit_distance: "Distance unit"
+  lbl_unit_distance_opt_1: "Km"
+  lbl_unit_distance_opt_2: "Mile"
+  lbl_unit_speed: "Average speed"
+  lbl_unit_speed_opt_1: "Km/h"
+  lbl_unit_speed_opt_2: "m/Km (pace)"  
+  lbl_btn_close_window: "Close"
+  lbl_btn_save_changes: "Update my infos"
+  lbl_btn_sync: "Synchronize now!"
+  hint_nikeplus_url: "Don't know about your Nike+ address?"
+  msg_tit_how_get_your_nikeplus_url: "How to know your Nike+ address"
+  msg_tit_syncrhonizing: "Sychronizing your last run"
+  msg_firsttime: "Welcome {name}! Your are close to setup your account. Tell us what's your Nikeplus address."
+  msg_needsetup: "Hello {name}! You still needs to provide your Nikeplus address and update your info. Don't lose time!"
+  msg_missconfigured: "Ooops {name}! Your Nikeplus address is wrong and your account isn't working. Take a look again and update your infos."
+  msg_welcome: "Mahalo, {name}! Your account is working well."
+  user_successfully_updated: "Your informations has been updated!"
+  user_unsuccessfully_updated: "Oops! There was something weird and we can't save your informations"  
+  fb_runpost_base_message: "I've just sync a {distance}{distance_unit} run with Nike+ and {equipment}"
+  fb_runpost_base_description: "Run performed at {date}{break}<b>Duration:</b> {duration}{break}<b>Average speed:</b> {speed}{break}<b>Burned calories:</b> {calories}{break}"
+  day_names: [Sunday, Monday, Thursday, Wednesday, Tuesday, Friday, Saturday]
+  abbr_day_names: [Sun, Mon, Thu, Wed, Tue, Fri, Sat]
+  month_names: [~, January, Februray, March, April, May, June, July, August, September, Ocotober, November, December]
+  abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  tbl_header_date: When
+  tbl_header_runid: Run ID
+  tbl_header_distance: Distance
+  tbl_header_duration: Duration
+  tbl_header_calories: Calories
+  tbl_header_speed: Speed
+  txt_about_runs_page: "Below you see all your runs posted on your Facebook wall. If there is a most recent run that the last listed below, you should {button}"
+  wait_until: "To re-sync, you need to wait until " 
+  no_new_run: "There is no new run to post on Facebook. Did you synchronize your last run with Nike+ via iTunes?"  
+  run_posted_on_fb: "Your last run has been posted on your Facebook wall"
+  loading: "Wait while we proccess your request..."
+  you_havent_runs: "You have not any synchronized runs yet"

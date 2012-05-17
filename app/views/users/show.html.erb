@@ -1,0 +1,140 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav pull-left">
+				<li>
+					<a href="#">MYRUNAPP.COM</a>
+				</li>
+			</ul>		
+			<ul class="nav pull-right">
+				<li>
+					<%= link_to(t(:sign_out), "/signout") %>
+				</li>
+			</ul>				
+		</div>
+	</div>
+</div>
+	
+<div class="container below">
+	<div class="row">
+		<div class="span2">
+			<div class="avatar border-<%= @user.get_level_color %>" style="background: url(<%= (@user.avatar || @user.image_url) %>) no-repeat scroll 0 0 transparent">
+				<span class="name"><%= @user.name %></span>
+			</div>
+		</div>
+		<div class="span10">
+			<div class="chat border-<%= @user.get_level_color %>"><p><%= @user.greeting_msg.html_safe %></p></div>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="span12">
+			<%= menu_tab(:user, @user.id) %>
+		</div>		
+	</div>
+	<div class="row">
+		<div class="span12">		
+			<%= flash_notice(flash[:notice]) %>
+			<%= form_for [@user], :html=> {:class => "form-horizontal"} do |f| %>
+				<fieldset>
+					<div class="control-group" id="grp_nikeplus_url">
+					   <legend><%= t(:lbl_nikeplus_setup) %></legend>
+                       <label class="control-label" for="input01"><%= t(:lbl_nikeplus_url) %></label>
+					   <div class="controls">
+					      <%= f.text_field :nikeplus_url, :class => "xlarge span5" %>
+						  <a class="btn btn-small" href="#verifyURL" id="btn_verify_url"><i class="icon-question-sign"></i> <span><%= t(:lbl_test_nikeplus_url) %></span></a>
+						  <p class="help-block"><%= t(:hint_nikeplus_url) %> <a href="#" id="link_modal_nikeplus_url"><%= t(:click_here) %></a></p>
+						  
+					   </div>
+				   </div>					
+				</fieldset>				
+				<fieldset>
+				    <div class="control-group">
+					   <legend><%= t(:lbl_units) %></legend>					
+					   <label class="control-label"><%= t(:lbl_unit_distance) %></label>
+					   <div class="controls">
+						  <label class="radio">
+							<%= f.radio_button :distance_in_km, true %> <%= t(:lbl_unit_distance_opt_1) %>
+						  </label>
+						  <label class="radio">
+							<%= f.radio_button :distance_in_km, false %> <%= t(:lbl_unit_distance_opt_2) %>
+						  </label>
+					   </div>
+					</div>
+                    <div class="control-group">
+					   <label class="control-label"><%= t(:lbl_unit_speed) %></label>
+					   <div class="controls">
+					      <label class="radio">
+							<%= f.radio_button :speed_in_km, true %> <%= t(:lbl_unit_speed_opt_1) %>
+						  </label>
+						  <label class="radio">
+							<%= f.radio_button :speed_in_km, false %> <%= t(:lbl_unit_speed_opt_2) %>
+						  </label>
+					   </div>
+					 </div>					  
+					 <div class="control-group">
+					  <div class="form-actions">
+						<button class="btn btn-primary" type="submit"><%= t(:lbl_btn_save_changes) %></button>
+					  </div>
+					 </div>					
+				</fieldset>
+			<% end %>
+		</div>		
+	</div>
+</div>
+
+<!--
+=================================================================
+MODAL
+=================================================================
+-->
+
+<div class="modal modal-wizard fade" id="myModal">
+ <div class="modal-header">
+   <button class="close" data-dismiss="modal">x</button>
+   <h3><%= t(:msg_tit_how_get_your_nikeplus_url) %></h3>
+ </div>
+ <div class="modal-body modal-wizard-body">
+	<div class="carousel slide" id="myCarousel">
+		<div class="carousel-inner">
+			<div class="item">
+				<%= image_tag("screen1.jpg") %>
+				<div class="carousel-caption">
+					<h4><b>1.</b> <%= t(:wizard_stp1_h4) %></h4>
+					<p><%= t(:wizard_stp1_txt) %></p>
+				</div>
+			</div>
+			<div class="item">
+				<%= image_tag("screen2.jpg") %>
+				<div class="carousel-caption">
+					<h4><b>2.</b> <%= t(:wizard_stp2_h4) %></h4>
+					<p><%= t(:wizard_stp2_txt) %></p>
+				</div>
+			</div>
+			<div class="item">
+				<%= image_tag("screen3.jpg") %>
+				<div class="carousel-caption">
+					<h4><b>3.</b> <%= t(:wizard_stp3_h4) %></h4>
+					<p><%= t(:wizard_stp3_txt) %></p>
+				</div>
+			</div>
+			<div class="item">
+				<%= image_tag("screen4.jpg") %>
+				<div class="carousel-caption">
+					<h4><b>4.</b> <%= t(:wizard_stp4_h4) %></h4>
+					<p><%= t(:wizard_stp4_txt) %></p>
+				</div>
+			</div>			
+		</div>
+		<!-- Carousel nav -->
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+ </div>
+</div>
+
+<!--
+=================================================================
+END MODAL
+=================================================================
+-->

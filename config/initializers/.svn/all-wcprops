@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/8/myrunapp/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/8/myrunapp/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/8/myrunapp/config/initializers/session_store.rb
+END
+omniauth.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/8/myrunapp/config/initializers/omniauth.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/8/myrunapp/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/8/myrunapp/config/initializers/backtrace_silencers.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/8/myrunapp/config/initializers/mime_types.rb
+END
+wrap_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/8/myrunapp/config/initializers/wrap_parameters.rb
+END

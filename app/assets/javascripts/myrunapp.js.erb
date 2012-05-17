@@ -1,0 +1,119 @@
+var MyRunApp = {
+	
+	isURLWellFormated : function(url) {
+		url = url.match(/^http[s]?:\/\//) ? url : "http://" + url	
+		var test = url.match(/^http[s]?:\/\/nike[a-z]+?\.nike.com\/.*\/history\/[0-9]{1,}\//);
+		return (test && test.length == 1)
+	},
+	
+	verifyURL : function(url) {		
+		url = url.match(/^http[s]?:\/\//) ? url : "http://" + url
+		if (!this.isURLWellFormated(url)) {
+			return false;
+		}
+		// extract the user_id from url and request xml to avoid unecessary payload
+		var nike_plus_public_data 	= "http://nikerunning.nike.com/nikeplus/v2/services/app/get_user_data.jsp?_plus=true&userID="
+		var test    				= url.match(/^http[s]?:\/\/nike[a-z]+?\.nike.com\/.*\/history\/([0-9]{1,})\//);
+		var user_id 				= test[1];
+		var object = {};
+		
+		$.ajax({
+		  type: 'GET',
+          url: "/users_ajax/request_nikeplus_user_data.json?uid=" + user_id,
+		  async: false,
+          success: function(b) {					 
+					 object = b;
+				   }
+		});
+
+		return object;
+	},
+	
+	modalDialog : function(title, body) {
+		$("#myModalDialog").find("h3").html(title);
+		$("#myModalDialog").find(".modal-body").html(body);
+		$("#myModalDialog").modal('show');
+	}
+};
+
+var debug;
+
+function resetVerifyButton() {
+  $("#grp_nikeplus_url").removeClass("error").removeClass("success");
+  var btn = $("#btn_verify_url");
+  btn.removeClass("btn-success").removeClass("btn-danger");
+  btn.find("i").removeClass("icon-ban-circle").removeClass("icon-ok-circle").addClass("icon-question-sign");
+  btn.find("span").html("<%= I18n.t(:lbl_test_nikeplus_url) %>");
+}
+
+$(document).ready(function() {
+	
+	$(".alert").delay(600).fadeOut();
+	
+	$("#link_modal_nikeplus_url").click(function() {
+	  $("#myModal").modal();
+	  $("#myCarousel").carousel();
+	});
+	
+	$("#user_nikeplus_url").focus(function() {
+	  resetVerifyButton();
+	});
+	
+	$("#btn_verify_url").click(function() {
+	
+		//test if given profile url on nikeplus is valid
+		var given_url     = $("#user_nikeplus_url").val();
+		var well_formated = MyRunApp.isURLWellFormated(given_url);
+		$("#js_waiting").fadeIn();
+		
+		if(!well_formated) {
+			$("#grp_nikeplus_url").addClass("error");
+			$(this).addClass("btn-danger");
+			$(this).find("i").removeClass("icon-question-sign").addClass("icon-ban-circle");
+			$(this).find("span").html("<%= I18n.t(:lbl_test_nikeplus_url_bad) %>");
+			return;
+		} else {
+			
+			var profile = MyRunApp.verifyURL(given_url);			
+			$("#js_waiting").hide();
+			
+			if (profile.screenName) {
+				var screenName = profile.screenName;
+				$(this).addClass("btn-success");
+				$(this).find("i").removeClass("icon-question-sign").addClass("icon-ok-circle");
+				$(this).find("span").html("<%= I18n.t(:lbl_test_nikeplus_url_successfull) %>".replace(/{screenName}/, screenName));
+			} else {
+				$("#grp_nikeplus_url").addClass("error");
+				$(this).addClass("btn-danger");
+				$(this).find("i").removeClass("icon-question-sign").addClass("icon-ban-circle");
+				$(this).find("span").html("<%= I18n.t(:lbl_test_nikeplus_url_unsuccessfull) %>");
+			}		
+		}		
+	});
+	
+	$("#btn_synchronize").click(function(){
+		$("#js_waiting").fadeIn();
+		$.ajax({
+		  type: 'GET',
+          url: "/users_ajax/manual_sync.json",
+          success: function(b) {					 
+		             $("#js_waiting").hide();
+					 var object = b[0];					 
+					 if (object.error) {
+					 	MyRunApp.modalDialog("<%= I18n.t(:msg_tit_syncrhonizing) %>", object.error_type);
+					 } else {
+					    var objRun= object.run;
+					    var objTr = $("<tr><td>" + objRun.nikeplus_run_id +
+                                      "</td><td>"  + objRun.date +
+									  "</td><td>"  + objRun.distance +
+									  "</td><td>"  + objRun.duration +
+									  "</td><td>"  + objRun.speed +
+                                      "</td><td>"  + objRun.calories + "</td></tr>").addClass("highlited");
+					 	$(".table-striped").find("tbody").prepend(objTr);
+					 	$(".no-records").hide();
+					 }					 
+				   }
+		});
+	});
+	
+});

@@ -1,0 +1,62 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt_BR:
+  home_title: "MyRunApp: compartilhar corridas com Nike+ no Facebook"
+  home_h1: "Compartilhar corridas com Nike+ no Facebook"
+  home_headline: "Se você corre utilizando o sensor Nike+ da Apple, você pode compartilhar cada nova corrida no seu Facebook utilizando o MyRun App."
+  must_be_logged: "Você precisa fazer login para acessar sua área"  
+  sign_in_with_provider: "Faça login com sua conta no Facebook"
+  sign_in_successfully: "Login realizado com sucesso"
+  sign_out_successfully: "Você se desconectou com sucesso"    
+  sign_out: "Desconectar"
+  invalid_access: "Não temos certeza quanto à sua identidade. Tente realizar novo login"
+  welcome: "Bemvindo"
+  click_here: "Clique aqui"
+  help: "Ajuda"
+  preferences_menu: "Preferências"
+  history_menu: "Histórico de corridas"
+  lbl_basic_informations: "Informações básicas"
+  lbl_nikeplus_setup: "Configuração de sua conta no Nike+"
+  lbl_nikeplus_url: "Seu endereço no Nike+"
+  lbl_test_nikeplus_url: "Verifique se preencheu corretamente"
+  lbl_test_nikeplus_url_successfull: "Muito bem, {screenName}! Agora clique em Salvar configurações"
+  lbl_test_nikeplus_url_unsuccessfull: "Não funcionou. Verifique e informe o endereço novamente"
+  lbl_test_nikeplus_url_bad: "O endereço não está em formato correto"  
+  lbl_units: "Como você prefere mostrar suas estatísticas?"
+  lbl_unit_distance: "Unidade de distância"
+  lbl_unit_distance_opt_1: "Km"
+  lbl_unit_distance_opt_2: "Milha"
+  lbl_unit_speed: "Unidade de velocidade média"
+  lbl_unit_speed_opt_1: "Km/h"
+  lbl_unit_speed_opt_2: "m/Km (ritmo)"  
+  lbl_btn_close_window: "Fechar"
+  lbl_btn_save_changes: "Salvar configurações"
+  lbl_btn_sync: "Sincronizar agora!"
+  hint_nikeplus_url: "Não sabe como encontrar seu endereço no Nike+?"
+  msg_tit_how_get_your_nikeplus_url: "Como obter o seu endereço no Nike+"
+  msg_tit_syncrhonizing: "Sincronizando sua última corrida"
+  msg_firsttime: "Bemvindo <b>{name}</b>! Você está quase pronto. Falta apenas nos dizer qual é o seu endereço no Nike+."
+  msg_needsetup: "Olá <b>{name}</b>! Você ainda não nos informou seu endereço no Nike+. Por que não aproveita e faz isso agora?"
+  msg_missconfigured: "Ooops <b>{name}</b>! Seu endereço no Nike+ parece errado. Verifique novamente e salve suas informações."
+  msg_welcome: "Ei, <b>{name}</b>! Suas configurações estão OK. Sempre que você sincronizar uma nova corrida com seu Nike+, nós iremos encontrá-la e postar no seu Facebook"
+  user_successfully_updated: "Suas informações foram atualizadas!"
+  user_unsuccessfully_updated: "Oops! Houve algo inesperado e não conseguimos atualizar suas informações"  
+  fb_runpost_base_message: "Acabei de correr {distance}{distance_unit} utilizando meu sensor Nike+ com {equipment}"
+  fb_runpost_base_description: "Corrida realizada em {date}{break}<b>Duração:</b> {duration}{break}<b>Velocidade média:</b> {speed}{break}<b>Calorias consumidas:</b> {calories}{break}"
+  day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+  abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+  month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+  abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+  tbl_header_date: Dia
+  tbl_header_runid: ID
+  tbl_header_distance: Distância
+  tbl_header_duration: Duração
+  tbl_header_calories: Calorias
+  tbl_header_speed: Velocidade
+  txt_about_runs_page: "Abaixo você vê todas as suas corridas postadas no Facebook através do MyRun App. Se você tem alguma nova corrida com seu Nike+, você deve {button}"
+  wait_until: "Nova sincronização manual só pode ser feita após "
+  no_new_run: "Não há uma corrida mais recente para postarmos. Você já sincronizou uma nova corrida com seu Nike+ via iTunes?"
+  run_posted_on_fb: "Sua última corrida foi postada com sucesso em seu Facebook"
+  loading: "Aguarde enquanto realizo essa tarefa..."
+  you_havent_runs: "Você não tem nenhuma corrida sincronizada ainda"

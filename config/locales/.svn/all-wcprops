@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/!svn/ver/14/myrunapp/config/locales
+END
+en.yml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/14/myrunapp/config/locales/en.yml
+END
+pt_BR.yml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/13/myrunapp/config/locales/pt_BR.yml
+END
+active_support.pt-br.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/8/myrunapp/config/locales/active_support.pt-br.yml
+END

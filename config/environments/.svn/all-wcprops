@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/8/myrunapp/config/environments
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/8/myrunapp/config/environments/test.rb
+END
+development.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/8/myrunapp/config/environments/development.rb
+END
+production.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/8/myrunapp/config/environments/production.rb
+END

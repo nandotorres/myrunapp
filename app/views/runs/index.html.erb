@@ -1,0 +1,63 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav pull-left">
+				<li>
+					<a href="#">MYRUNAPP.COM</a>
+				</li>
+			</ul>		
+			<ul class="nav pull-right">
+				<li>
+					<%= link_to(t(:sign_out), "/signout") %>
+				</li>
+			</ul>				
+		</div>
+	</div>
+</div>	
+	
+<div class="container below">
+	<div class="row">
+		<div class="span12">
+			<%= menu_tab(:runs, @user.id) %>
+		</div>		
+	</div>
+	<div class="row">
+		<div class="span12">		
+			<%= flash_notice(flash[:notice]) %>
+			<%  replaces = {:button => %{<a class="btn btn-mini" href="#synchronizeNow" id="btn_synchronize"><i class="icon-repeat"></i> <span>#{t(:lbl_btn_sync)}</span></a>}} %>
+			<%= page_about(t(:txt_about_runs_page), replaces) %>
+			<div class="alert hide" id="js_feedback"></div>
+			<div class="loading-box hide" id="js_waiting"><%= image_tag("loading.gif") %><span> <%= t(:loading) %> </span></div>
+			<table class="table table-striped">
+			  <thead>
+			   <tr>
+				<th><%= t(:tbl_header_runid) %></th>
+				<th><%= t(:tbl_header_date) %></th>
+				<th><%= t(:tbl_header_distance) %></th>
+				<th><%= t(:tbl_header_duration) %></th>
+				<th><%= t(:tbl_header_speed) %></th>
+				<th><%= t(:tbl_header_calories) %></th>
+			   </tr>
+			  </thead>
+			  <tbody>
+				<% @runs.each do |r| %>
+				  <tr>
+				   <td><%= r.nikeplus_run_id %></td>
+				   <td><%= r.regionalized_date %></td>
+				   <td><%= r.distance %> <%= r.user_distance_unit %></td>
+				   <td><%= r.regionalized_duration %></td>
+				   <td><%= r.regionalized_speed %></td>
+				   <td><%= r.calories %></td>
+				 </tr>
+				<% end %>
+			  </tbody>
+			</table>
+			<% if @runs.count == 0 %>
+				<%= no_records(t(:you_havent_runs)) %>
+			<% end %>			
+		</div>		
+	</div>     
+</div>
+
+
+
