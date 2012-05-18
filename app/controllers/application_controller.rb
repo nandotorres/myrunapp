@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end 
   
   def extract_locale_from_accept_language_header
-    lang = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/(^[a-z]{2})(-[a-z]{2})?/).first.join("")
+    lang = request.env['HTTP_ACCEPT_LANGUAGE'] ? request.env['HTTP_ACCEPT_LANGUAGE'].scan(/(^[a-z]{2})(-[a-z]{2})?/).first.join("") : 'pt_BR'
   end
   
 end
