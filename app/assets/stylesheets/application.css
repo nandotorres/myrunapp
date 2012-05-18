@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     z-index: 1;
 }
-.home h1, .home h2, span.logo {
+.home h1, .home h2, span.logo, span.logo-internal {
 	font-family: 'MuseoSlab500', helvetica, arial;
 }
 
@@ -38,11 +38,16 @@ span.logo {
 	font-size: 1.875em;
 }
 
-span.logo span {
+span.logo-internal {
+	color: #fafafa; 
+	font-size: 1.875em;
+}
+
+span.logo, span.logo-internal span {
 	color: orange;
 }
 
-span.logo small {
+span.logo, span.logo-internal small {
 	font-size: 0.425em;
 	color: #c0c0c0;
 }
