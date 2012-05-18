@@ -43,7 +43,7 @@ span.logo-internal {
 	font-size: 1.875em;
 }
 
-span.logo, span.logo-internal span {
+span.logo span, span.logo-internal span {
 	color: orange;
 }
 
