@@ -47,7 +47,7 @@ span.logo, span.logo-internal span {
 	color: orange;
 }
 
-span.logo, span.logo-internal small {
+span small {
 	font-size: 0.425em;
 	color: #c0c0c0;
 }
