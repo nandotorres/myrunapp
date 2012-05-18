@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def disclamer_text(text)
-    text.gsub("{facebook_page}", link_to("MyRun App on Facebook", "http://www.facebook.com/pages/MyRun-App/")).html_safe
+    text.gsub("{facebook_page}", link_to("MyRun App on Facebook", "http://www.facebook.com/myrunapp/")).html_safe
   end
   
   def user_avatar(user)
