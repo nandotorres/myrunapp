@@ -20,8 +20,17 @@
             <%= link_to t(:sign_in_with_provider), "/auth/facebook", :class => "btn btn-primary btn-large", :rel => "nofollow" %>
           </div>      
         </div>
+        <div class="row">
+	      <div class="span12">
+			<div class="disclamer">
+		    	<%= disclamer_text(t(:disclamer)) %>
+			</div>
+		  </div>
+	    </div>
 	</div>
 </div>
+
+<% content_for :javascript_footer do %>
 
 <script type="text/javascript">
 	(function() {
@@ -46,6 +55,8 @@
   })();
 
 </script>
+
+<% end %>
 
 
 

@@ -3,6 +3,7 @@
 
 en:
   home_title: "MyRunApp: share your Nike+ workouts on Facebook"
+  meta_description: "Share Nike+ workouts on Facebook in a easy and funny way"
   home_h1: "Easy way to share Nike+ workouts on Facebook"
   home_headline: "If you use Apple's Nike+ sensor, you can share each new workout on your Facebook. So simple and fun. You just need to log in and provide your Nike+ address to start sharing."
   must_be_logged: "You must log on in order to get access to MyRunApp"  
@@ -60,7 +61,7 @@ en:
   run_posted_on_fb: "Your last workout has been posted on your Facebook wall"
   loading: "Wait while we proccess your request..."
   you_havent_runs: "You have not any synchronized workouts yet"
-  disclamer: "Note: MyRunApp.com is a free app without any relations with Nike<sup>TM</sup> or Apple<sup>TM</sup>."
+  disclamer: "Note: MyRunApp.com is a free app without any relations with Nike<sup>TM</sup> or Apple<sup>TM</sup>. If you need help or contact-us, please visit {facebook_page}"
   wizard_stp1_h4: "Go to Nike+ website"
   wizard_stp1_txt: "Open your browser and go the following address http://nikeplus.nike.com/plus/"
   wizard_stp2_h4: "Log on Nike+"

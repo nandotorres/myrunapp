@@ -4,13 +4,15 @@
   <title><%= t(:home_title) %></title>
   <%= stylesheet_link_tag "application" %>  
   <%= csrf_meta_tags %>
+  <meta name="description" value="<%= t(:meta_description) %>">
   <meta property="og:title" content="MyRun App" />
   <meta property="og:description" content="Easy way to share your Nike+ workouts on Facebook. Free and funny. Try it!" />
-  <meta property="og:image" content="<%= image_path("run_ready.jpg") %>" />
+  <meta property="og:image" content="http://www.myrunapp.com<%= image_path("run_ready.jpg") %>" />
 </head>
 
 <body class="body-home">
     <%= yield %>
 </body>
   <%= javascript_include_tag "application" %>
+  <%= yield(:javascript_footer) %>
 </html>

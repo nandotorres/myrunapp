@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 pt_BR:
   home_title: "MyRunApp: compartilhar corridas com Nike+ no Facebook"
+  meta_description: "Compartilhe suas corridas com o Nike+ em seu Facebook de uma forma simples e divertida"
   home_h1: "Compartilhar corridas com Nike+ no Facebook"
   home_headline: "Se você corre utilizando o sensor Nike+ da Apple, você pode compartilhar cada nova corrida no seu Facebook utilizando o MyRun App."
   must_be_logged: "Você precisa fazer login para acessar sua área"  
@@ -59,7 +60,7 @@ pt_BR:
   run_posted_on_fb: "Sua última corrida foi postada com sucesso em seu Facebook"
   loading: "Aguarde enquanto realizo essa tarefa..."
   you_havent_runs: "Você não tem nenhuma corrida sincronizada ainda"
-  disclamer: "Importante: O MyRunApp.com é um aplicativo gratuito que não tem nenhuma relação com a Nike<sup>TM</sup> ou Apple<sup>TM</sup>."
+  disclamer: "Importante: O MyRunApp.com é um aplicativo gratuito que não tem nenhuma relação com a Nike<sup>TM</sup> ou Apple<sup>TM</sup>. Se você precisar de ajuda ou nos contactar, visite {facebook_page}"
   wizard_stp1_h4: "Acesse o site Nike+"
   wizard_stp1_txt: "Abra seu navegador e acesse o endereço http://nikeplus.nike.com/plus/"
   wizard_stp2_h4: "Faça login no Nike+"

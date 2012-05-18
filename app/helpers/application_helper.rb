@@ -1,5 +1,13 @@
 module ApplicationHelper
 
+  def disclamer_text(text)
+    text.gsub("{facebook_page}", link_to("MyRun App on Facebook", "http://www.facebook.com/pages/MyRun-App/")).html_safe
+  end
+  
+  def user_avatar(user)
+     return "http://nikeplus.nike.com#{user.avatar}" if user.avatar or return user.image_url
+  end
+  
 	def flash_notice(notice)
 		html = %{}
 		html << %{<div class="alert alert-success">#{notice}</div>} if notice

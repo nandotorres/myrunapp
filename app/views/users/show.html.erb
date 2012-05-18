@@ -18,7 +18,7 @@
 <div class="container below">
 	<div class="row">
 		<div class="span2">
-			<div class="avatar border-<%= @user.get_level_color %>" style="background: url(<%= (@user.avatar || @user.image_url) %>) no-repeat scroll 0 0 transparent">
+			<div class="avatar border-<%= @user.get_level_color %>" style="background: url(<%= user_avatar(@user) %>) no-repeat scroll 0 0 transparent">
 				<span class="name"><%= @user.name %></span>
 			</div>
 		</div>

@@ -63,6 +63,14 @@ span.logo small {
     min-width: 950px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 }
+.disclamer {
+	margin: 20px 0;
+	padding: 10px;
+	border: 1px solid #c0c0c0;
+	background: #fafafa;
+	border-radius: 3px;
+	font-size: 0.875em;
+}
 .image-home {text-align: center; padding: 30px 0}
 .wrapper-white {background: #ffffff !important; padding: 40px 0 20px 0;}
 .social-buttons {float: right; position: relative; overflow: hidden; top: 0px;}
@@ -84,7 +92,7 @@ span.logo small {
 .border-purple {border: 3px solid purple;}
 .border-black {border: 3px solid black;}
 .modal-wizard {
-	width: 780px; height: 480px;
+	width: 780px; height: 480px; display: none;
 }
 .modal-wizard-body {
 	overflow: hidden; height: 480px;
