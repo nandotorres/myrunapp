@@ -20,10 +20,8 @@ class Run < ActiveRecord::Base
   end
 
   def regionalized_duration
-    if (duration / 60000) > 120
+    if (duration / 60000) > 60
       "#{(duration / 3600000).to_i}h#{(duration % 3600000)}"
-    elsif (duration / 60000) > 60
-      "#{(duration / 60000).to_i}h#{(duration % 60000)}"
     else
       "#{(duration/60000).round(2)}min"
     end
