@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'mysql2'
+gem 'whenever', :require => false
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'
