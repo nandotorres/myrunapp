@@ -5,7 +5,7 @@ module ApplicationHelper
   end
   
   def user_avatar(user)
-     return "http://nikeplus.nike.com#{user.avatar}" if user.avatar or return user.image_url
+     return "http://www.nike.com#{user.avatar}" if user.avatar or return user.image_url
   end
   
 	def flash_notice(notice)
