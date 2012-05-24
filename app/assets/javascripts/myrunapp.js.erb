@@ -12,7 +12,7 @@ var MyRunApp = {
 			return false;
 		}
 		// extract the user_id from url and request xml to avoid unecessary payload
-		var nike_plus_public_data 	= "http://nikerunning.nike.com/nikeplus/v2/services/app/get_user_data.jsp?_plus=true&userID="
+		var nike_plus_public_data 	= "http://nikerunning.nike.com/nikeplus/v2/services/app/get_user_data.jsp?_plus=true&userID=";
 		var test    				= url.match(/^http[s]?:\/\/nike[a-z]+?\.nike.com\/.*\/history\/([0-9]{1,})\//);
 		var user_id 				= test[1];
 		var object = {};
@@ -77,7 +77,9 @@ $(document).ready(function() {
 			var profile = MyRunApp.verifyURL(given_url);			
 			$("#js_waiting").hide();
 			
-			if (profile.screenName) {
+			if (profile.serviceException) {
+				MyRunApp.modalDialog("<%= I18n.t(:error) %>", profile.serviceException);
+			} else if (profile.screenName) {
 				var screenName = profile.screenName;
 				$(this).addClass("btn-success");
 				$(this).find("i").removeClass("icon-question-sign").addClass("icon-ok-circle");

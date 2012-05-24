@@ -15,6 +15,7 @@ en:
   welcome: "Welcome"
   click_here: "Click here"
   help: "Help"
+  error: "Error"
   preferences_menu: "Preferences"
   history_menu: "Workout history"
   lbl_basic_informations: "Basic informations"

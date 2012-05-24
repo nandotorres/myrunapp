@@ -9,6 +9,7 @@ module MyRunAppAPI
 	USER_DATA_URL       = "http://nikerunning.nike.com/nikeplus/v2/services/app/get_user_data.jsp?_plus=true&userID="
 	XPATHS = {
 		:user_data => [
+		  ['serviceException', 'plusService/serviceException'],
 			['screenName', 'plusService/userOptions/screenName'],
 			['avatar', 'plusService/userOptions/avatar'],
 			['powerSongArtist', 'plusService/userOptions/powerSong/artist'],
