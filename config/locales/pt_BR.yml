@@ -42,7 +42,7 @@ pt_BR:
   msg_welcome: "Ei, <b>{name}</b>! Suas configurações estão OK. Sempre que você sincronizar uma nova corrida com seu Nike+, nós iremos encontrá-la e postar no seu Facebook"
   user_successfully_updated: "Suas informações foram atualizadas!"
   user_unsuccessfully_updated: "Oops! Houve algo inesperado e não conseguimos atualizar suas informações"  
-  fb_runpost_base_message: "Acabei de correr {distance}{distance_unit} utilizando meu sensor Nike+ com {equipment}"
+  fb_runpost_base_message: "Sincronizei uma nova corrida de {distance}{distance_unit} com o sensor Nike+ via {equipment}"
   fb_runpost_base_description: "Corrida realizada em {date}{break}<b>Duração:</b> {duration}{break}<b>Velocidade média:</b> {speed}{break}<b>Calorias consumidas:</b> {calories}{break}"
   day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
   abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
