@@ -34,6 +34,6 @@ class ApplicationController < ActionController::Base
   end
   
   def redirect_if_no_starts_with_www
-    head :moved_permanently, :location => "http://www.#{request.domain}" if !(request.domain.gsub(/^www/).count > 0)
+    head :moved_permanently, :location => "http://www.#{request.domain}" if (Rails.env == "production" && request.host == "myrunapp.com")
   end
 end
