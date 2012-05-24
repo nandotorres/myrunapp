@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :set_locale
+  before_filter :redirect_if_no_starts_with_www, :set_locale
   protect_from_forgery  
   
   def set_locale
@@ -33,4 +33,7 @@ class ApplicationController < ActionController::Base
     lang = request.env['HTTP_ACCEPT_LANGUAGE'] ? request.env['HTTP_ACCEPT_LANGUAGE'].scan(/(^[a-z]{2})(-[a-z]{2})?/).first.join("") : 'pt_BR'
   end
   
+  def redirect_if_no_starts_with_www
+    head :moved_permanently, :location => "http://www.#{request.domain}" if !(request.domain.gsub(/^www/).count > 0)
+  end
 end
